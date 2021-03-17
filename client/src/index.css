@@ -9,7 +9,6 @@
 html {
   background: linear-gradient(120deg, #C97D60, #ffffff);
   font-family: 'Poppins', sans-serif;
-  min-height: 95vh;
   /* color: #262322; */
 }
 
@@ -60,7 +59,7 @@ html {
 
 /* Main */
 .Main {
-  min-height: 65vh;
+  min-height: 80vh;
   width: 90%;
   margin-left: 5%;
   margin-top: 2rem;
@@ -99,10 +98,9 @@ html {
 .Footer {
   min-height: 10vh;
   width: 100%;
+  margin-top: 10vh;
   margin-bottom: -10px;
   background: #262322;
   color: #F2E5D7;
-  position: fixed;
-  bottom: 0;
   text-align: center;
 }

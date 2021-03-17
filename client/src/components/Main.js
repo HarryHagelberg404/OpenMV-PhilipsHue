@@ -1,3 +1,5 @@
+import Lights from "./Lights"
+
 function Main() {
   return (
     <>
@@ -8,9 +10,7 @@ function Main() {
           </video>
         </div>
         <div className="Info">
-          <h1>Information</h1>
-          <p>Information</p>
-          <p>Information</p>
+          <Lights />
         </div>
       </div>
     </>

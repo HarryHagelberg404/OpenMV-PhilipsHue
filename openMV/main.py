@@ -1,4 +1,5 @@
-from phue import Bridge
+# Pip install phue
+from phue.py import Bridge
 
 b = Bridge("192.168.1.187", "Ji5zEueIFeM1rUXDGdc8sSsYBrdGRKNpbOkTqouE")
 
