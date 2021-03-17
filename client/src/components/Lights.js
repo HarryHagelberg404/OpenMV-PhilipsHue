@@ -1,12 +1,17 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
+import axios from "axios";
 
 export default function Lights() {
-    
-    return(
-        <div class="container">
-            <div class="jumbotron">
-                <p>Placeholder of light data</p>
-                {/* <h1>All Lights</h1>
+  useEffect(() => {
+    axios.get("http://localhost:4000/api/allligths").then((response) => {
+      console.log(response.data);
+    });
+  }, []);
+
+  return (
+    <div class="container">
+      <div class="jumbotron">
+        {/* <h1>All Lights</h1>
                 <br>
                 <% lights.forEach((light) => { %>
                     <div class="list-group-item">
@@ -15,7 +20,7 @@ export default function Lights() {
                     Turned On: <%= light.on %>
                     </div>
                 <% }) %> */}
-            </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }
