@@ -12,7 +12,6 @@ export default function Lights() {
     });
   }, []);
   return (
-<<<<<<< HEAD
     <div className="container">
       <div className="jumbotron">
         {/* <h1>All Lights</h1>
@@ -24,18 +23,6 @@ export default function Lights() {
                     Turned On: <%= light.on %>
                     </div>
                 <% }) %> */}
-=======
-    <div class="container">
-      <div class="jumbotron">
-        {lights.map((data) => (
-          <div>
-            <Link to={`/lights/${data.id}`}>
-              <h1>Lamp {data.id}</h1>
-            </Link>
-            <p>Status On/Off: {String(data.on) === "true" ? "On" : "Off"}</p>
-          </div>
-        ))}
->>>>>>> eb19d745017596de175cc3f97f401a8eb38d9166
       </div>
     </div>
   );

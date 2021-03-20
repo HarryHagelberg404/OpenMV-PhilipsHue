@@ -21,17 +21,10 @@ export default function Light() {
     console.log("hej");
   };
   return (
-<<<<<<< HEAD
     <div className="container">
       <div className="jumbo1">
         <h1 id="lightid"> Light id här </h1>
         <table className="table">
-=======
-    <div class="container">
-      <div class="jumbo1">
-        <h1 id="lightid"> Light {id.substr(-1)} </h1>
-        <table class="table">
->>>>>>> eb19d745017596de175cc3f97f401a8eb38d9166
           <thead>
             <tr>
               <th>Turned On</th>
