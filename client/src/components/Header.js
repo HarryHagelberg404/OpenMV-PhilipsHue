@@ -9,11 +9,6 @@ export default function Header() {return (
                 <p>Light.AI</p>
             </li>
           </Link>
-          <Link to="/register">
-            <li>
-              <p>Register</p>
-            </li>
-          </Link>
         </ul>
       </nav>
     </header>
