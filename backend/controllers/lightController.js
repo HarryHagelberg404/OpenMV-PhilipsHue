@@ -1,22 +1,26 @@
 "use strict";
 
 var rp = require("request-promise");
-const lightController = {};
-const urlOri =
-  "http://192.168.0.47/api/hzcaJDl7DDWXbG6fECcQp5nfB83AV3xGLSSP7dN1/lights/";
 
-/**
- * Renders our 'homepage'.
- *
- * @param  {object} req Is the request object.
- * @param  {object} res Is the response object.
- */
+const lightController = {};
+
+lightController.urlOri = "http://192.168.0.47/api/hzcaJDl7DDWXbG6fECcQp5nfB83AV3xGLSSP7dN1/lights/";
+lightController.personIsInFront = false;
+
+lightController.togglePerson = (req, res) => {
+  // Send this body from openMV
+  // personIsInFront: true/false
+  lightController.personIsInFront = req.body.personIsInFront;
+};
+
+// If lightController.personIsInFront == false, send error message
+// Saying that a person needs to be in front of camera
+// Have check in beginning
 
 lightController.alllights = (req, res) => {
-  var url = urlOri;
   console.log(url);
   var options = {
-    uri: url,
+    uri: lightController.urlOri,
     json: true,
   };
   rp(options)
@@ -38,31 +42,35 @@ lightController.alllights = (req, res) => {
 };
 
 lightController.changelight = (req, res) => {
-  const id = req.params.id;
-  console.log("hej", id);
-  var data = req.body.data;
-  console.log(data);
-  // const state = data["on"];
-  // console.log(state);
-  // bright = data["bri"];
-  // console.log(bright);
-  var url = urlOri + id + "/state/";
-  // console.log(url);
-  var options = {
-    method: "PUT",
-    uri: url,
-    json: data,
-  };
-  rp(options)
-    .then(function (body) {
-      console.log("-----------");
-      console.log(body);
-      res.json(body);
-    })
-    .catch(function (err) {
-      console.log(err);
-      res.send("bad operation.");
-    });
+  if (lightController.personIsInFront) {
+    const id = req.params.id;
+    console.log("hej", id);
+    var data = req.body.data;
+    console.log(data);
+    // const state = data["on"];
+    // console.log(state);
+    // bright = data["bri"];
+    // console.log(bright);
+    var url = lightController.urlOri + id + "/state/";
+    // console.log(url);
+    var options = {
+      method: "PUT",
+      uri: url,
+      json: data,
+    };
+    rp(options)
+      .then(function (body) {
+        console.log("-----------");
+        console.log(body);
+        res.json(body);
+      })
+      .catch(function (err) {
+        console.log(err);
+        res.send("bad operation.");
+      });
+  } else {
+    res.send("A person needs to be in front of camera to operate lights.")
+  }
 };
 //   lightController.getspecificlight = (req, res) => {
 //     var id = req.params.id;
