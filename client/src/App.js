@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
-import Register from "./components/Register";
 import Footer from "./components/Footer";
 import Light from "./components/Light";
 
@@ -13,7 +12,6 @@ export default function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/register" component={Register} />
           <Route path="/lights/:id" component={Light} />
         </Switch>
         <Footer />

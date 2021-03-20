@@ -7,100 +7,104 @@
 }
 
 html {
-  background: linear-gradient(120deg, #C97D60, #ffffff);
+  background: linear-gradient(180deg, #ee2f2f, #ffffff);
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
   /* color: #262322; */
 }
 
-/* Färgschema valt av harrys waifu */
-/* Text: #262322 */
-/* Main: #63372C */
-/* Support: #C97D60 */
-/* Alternative: #FFBCB5 */
-/* Alt support: #F2E5D7 */
-
 /* Header */
 .Header {
-  background: #63372C;
+  /* background: #63372C; */
   width: 100%;
+  text-align: center;
+  margin-top: 1rem;
   /* border-bottom: 1px solid #dee2e6; */
 }
 
 .Header nav {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: row; */
   min-height: 10vh;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  text-align: center;
 }
 
-.Header ul {
-  display: flex;
-  justify-content: space-around;
+/* .Header ul {
+  /* display: flex;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  flex: 0.05 1 40rem;
-}
+  flex: 0.05 1 40rem; */
+/* } */
 
-.Header a {
-  color: #F2E5D7;
-  text-decoration: none;
-  list-style: none;
-  font-size: 1.6rem;
+.Header-headline {
+  font-size: 2.6rem;
   transition: all 0.3s ease;
 }
 
-.Header a:hover {
+.Header p {
+  color: #F2E5D7;
+}
+
+.Header a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.Header-headline:hover {
   cursor: pointer;
-  color: #FFBCB5;
-  transform: scale(1.1);
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
 /* Main */
 .Main {
   min-height: 80vh;
-  width: 90%;
-  margin-left: 5%;
+  width: 20rem;
   margin-top: 2rem;
-  background: #262322;
+  background: #b4b1b1;
   border-radius: 1.4rem;
   overflow: hidden;
   box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.75);
 }
 
 .Stream {
-  background: white;
   width: 100%;
   min-height: 40vh;
   text-align: center;
 }
 
 .Content {
-  width: 100%;
-  max-height: 50vh;
-  margin-bottom: -1rem;
+  width: 20rem;
 }
 
 .Info {
   text-align: left;
-  color: #F2E5D7;
-  background: linear-gradient(140deg, #8b1ae7, #1f1d1c);
-  min-height: 25vh;
+  color: #41403e;
+  margin-top: -2rem;
   padding-left: 10%;
   padding-top: 10%;
 }
-
-/* Register */
-
 
 /* Footer */
 .Footer {
   min-height: 10vh;
   width: 100%;
   margin-top: 10vh;
-  margin-bottom: -10px;
-  background: #262322;
-  color: #F2E5D7;
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+
+.Footer a {
+  transition: all 0.3s ease;
+}
+
+.Footer a:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
