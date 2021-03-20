@@ -3,7 +3,7 @@
 var rp = require("request-promise");
 const lightController = {};
 const urlOri =
-  "http://192.168.1.187/api/hzcaJDl7DDWXbG6fECcQp5nfB83AV3xGLSSP7dN1/lights/";
+  "http://192.168.0.47/api/hzcaJDl7DDWXbG6fECcQp5nfB83AV3xGLSSP7dN1/lights/";
 
 /**
  * Renders our 'homepage'.
@@ -47,7 +47,7 @@ lightController.changelight = (req, res) => {
   // bright = data["bri"];
   // console.log(bright);
   var url = urlOri + id + "/state/";
-  console.log(url);
+  // console.log(url);
   var options = {
     method: "PUT",
     uri: url,
@@ -55,11 +55,9 @@ lightController.changelight = (req, res) => {
   };
   rp(options)
     .then(function (body) {
-      //console.log("-----------");
-      //console.log(body);
-      //res.json(body);
-      //res.render('pages/singlelight', { lightinfo: body });
-      //res.redirect('/'+id);
+      console.log("-----------");
+      console.log(body);
+      res.json(body);
     })
     .catch(function (err) {
       console.log(err);
