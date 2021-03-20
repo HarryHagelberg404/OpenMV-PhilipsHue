@@ -42,7 +42,7 @@ export default function Light() {
   return (
     <div className="container">
       <div className="jumbo1">
-        <h1 id="lightid"> Light id här </h1>
+        <h1 id="lightid"> Light {lampValues.id}</h1>
         <table className="table">
           <thead>
             <tr>
