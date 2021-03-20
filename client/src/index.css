@@ -14,13 +14,6 @@ html {
   /* color: #262322; */
 }
 
-/* Färgschema valt av harrys waifu */
-/* Text: #262322 */
-/* Main: #63372C */
-/* Support: #C97D60 */
-/* Alternative: #FFBCB5 */
-/* Alt support: #F2E5D7 */
-
 /* Header */
 .Header {
   /* background: #63372C; */
@@ -48,18 +41,24 @@ html {
   flex: 0.05 1 40rem; */
 /* } */
 
-.Header a {
-  color: #F2E5D7;
-  text-decoration: none;
-  list-style: none;
+.Header-headline {
   font-size: 2.6rem;
   transition: all 0.3s ease;
 }
 
-.Header a:hover {
+.Header p {
+  color: #F2E5D7;
+}
+
+.Header a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.Header-headline:hover {
   cursor: pointer;
-  color: #FFBCB5;
-  transform: scale(1.1);
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
 /* Main */
@@ -91,9 +90,6 @@ html {
   padding-top: 10%;
 }
 
-/* Register */
-
-
 /* Footer */
 .Footer {
   min-height: 10vh;
@@ -105,5 +101,10 @@ html {
 }
 
 .Footer a {
+  transition: all 0.3s ease;
+}
+
+.Footer a:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
