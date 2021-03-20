@@ -5,10 +5,10 @@ function Main() {
     <>
       <div className="Main">
         <div className="Stream">
-          <video className="Content" autoPlay playsInline loop muted>
+          {/* <video className="Content" autoPlay playsInline loop muted>
             <source src="./hamster.mp4" type="video/mp4" />
-          </video>
-          {/* <img src=""/> */}
+          </video> */}
+          <img src="http://192.168.0.46:8080"/>
         </div>
         <div className="Info">
           <Lights />

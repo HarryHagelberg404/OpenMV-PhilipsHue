@@ -1,24 +1,32 @@
 "use strict";
 
 var rp = require("request-promise");
+var mqtt=require('mqtt');
 
 const lightController = {};
 
+lightController.mqttUrl = "mqtt://localhost:1883"
 lightController.urlOri = "http://192.168.0.47/api/hzcaJDl7DDWXbG6fECcQp5nfB83AV3xGLSSP7dN1/lights/";
-lightController.personIsInFront = false;
+lightController.personIsInFront = true;
+lightController.client = mqtt.connect(lightController.mqttUrl, options)
+lightController.client.subscribe("personInFront")
 
 lightController.togglePerson = (req, res) => {
   // Send this body from openMV
-  // personIsInFront: true/false
-  lightController.personIsInFront = req.body.personIsInFront;
+  lightController.personIsInFront != lightController.personIsInFront;
 };
 
+lightController.initSubsription = () => {
+  client.on('message',function(topic, message, packet){
+    console.log("message is "+ message);
+    console.log("topic is "+ topic);
+  });
+}
 // If lightController.personIsInFront == false, send error message
 // Saying that a person needs to be in front of camera
 // Have check in beginning
 
 lightController.alllights = (req, res) => {
-  console.log(url);
   var options = {
     uri: lightController.urlOri,
     json: true,

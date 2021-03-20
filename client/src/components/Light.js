@@ -40,17 +40,10 @@ export default function Light() {
   };
 
   return (
-<<<<<<< HEAD
-    <div class="container">
-      <div class="jumbo1">
-        <h1 id="lightid"> Light {lampValues.id} </h1>
-        <table class="table">
-=======
     <div className="container">
       <div className="jumbo1">
         <h1 id="lightid"> Light id här </h1>
         <table className="table">
->>>>>>> 1bb3d5ae9d0f58978f30fc9cdc59ea33efb363a3
           <thead>
             <tr>
               <th>Turned On</th>
@@ -67,16 +60,10 @@ export default function Light() {
           </tbody>
         </table>
       </div>
-<<<<<<< HEAD
-      <div class="jumbotron">
-        <div class="row">
-          <div class="col-md-6">
-=======
 
       <div className="jumbotron">
         <div className="row">
           <div className="col-md-6">
->>>>>>> 1bb3d5ae9d0f58978f30fc9cdc59ea33efb363a3
             <h2> Change Light States </h2>
             <form onSubmit={(e) => changeColor(e)} className="formlight">
               <div>
