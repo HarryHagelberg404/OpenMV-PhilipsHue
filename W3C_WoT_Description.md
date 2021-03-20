@@ -18,7 +18,16 @@ If you are to visit the site just to view our interface you can visit the public
 
 ## Web of Things (WoT) Thing Description
 
-placeholder
+Make diagram aswell as explain different interactions and protocols.
+Key elements of WoT Desc (https://www.w3.org/TR/wot-thing-description/):
+
+* Abstract
+* Introduction
+* Conformance
+* Terminology
+* Namespace
+* Information model
+* ...
 
 ---
 
