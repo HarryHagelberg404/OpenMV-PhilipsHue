@@ -1,52 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-
-// $("#btn").on("click", function () {
-//   var lightid = $("#lightid").text();
-//   var res = lightid.split(" ");
-//   var id = res[2];
-//   var onstate = $("input[type=radio]:checked").val();
-//   if (onstate == "false") {
-//     onstate = false;
-//   } else {
-//     onstate = true;
-//   }
-//   var bright = $("input[type=range]").val();
-//   bright = parseInt(bright);
-
-//   var body = {
-//     on: onstate,
-//     bri: bright,
-//   };
-//   $.ajax({
-//     type: "POST",
-//     url: "/lights/" + id,
-//     data: JSON.stringify({ data: body }),
-//     contentType: "application/json; charset=utf-8",
-//     dataType: "json",
-//     success: function (resultData) {
-//       //console.log(resultData);
-//     },
-//   });
-// });
+import { useForm } from "react-hook-form";
+import queryString from "query-string";
 
 export default function Light() {
   const [lampLight, setLampLight] = useState(true);
+  const [rangeval, setRangeval] = useState(null);
+  const id = window.location.href;
+
   const changeColor = (e) => {
-    console.log(lampLight, e.target.value);
     e.preventDefault();
+    console.log(rangeval);
     const body = {
       on: lampLight,
-      bri: 240,
+      bri: Number(rangeval),
     };
-    axios.post(`http://localhost:4000/api/lights/1`, { data: body });
+    axios.post(`http://localhost:4000/api/lights/${id.substr(-1)}`, {
+      data: body,
+    });
     console.log("hej");
   };
   return (
+<<<<<<< HEAD
     <div className="container">
       <div className="jumbo1">
         <h1 id="lightid"> Light id här </h1>
         <table className="table">
+=======
+    <div class="container">
+      <div class="jumbo1">
+        <h1 id="lightid"> Light {id.substr(-1)} </h1>
+        <table class="table">
+>>>>>>> eb19d745017596de175cc3f97f401a8eb38d9166
           <thead>
             <tr>
               <th>Turned On</th>
@@ -69,20 +54,21 @@ export default function Light() {
         <div className="row">
           <div className="col-md-6">
             <h2> Change Light States </h2>
-            <form>
+            <form onSubmit={(e) => changeColor(e)}>
               <b> State: </b>
               <input
+                name="On"
                 type="radio"
-                name="state"
                 value="true"
-                checked
+                checked={true === lampLight}
                 onChange={() => setLampLight(true)}
               />
               <label> On </label>
               <input
+                name="Off"
                 type="radio"
-                name="state"
                 value="false"
+                checked={false === lampLight}
                 onChange={() => setLampLight(false)}
               />
               <label> Off </label>
@@ -93,23 +79,19 @@ export default function Light() {
                 </div>
                 <div class="col-md-3">
                   <input
-                    id="rangeslt"
                     type="range"
-                    min="0"
+                    placeholder=" Brightness"
+                    name=" Brightness"
                     max="254"
-                    step="1"
-                    value="254"
+                    min="0"
+                    onChange={(e) => setRangeval(e.target.value)}
                   />
                 </div>
                 <div class="col-md-1">
                   <label> 254 </label>
                 </div>
               </div>
-              <input
-                type="submit"
-                value="Submit"
-                onClick={(e) => changeColor(e)}
-              />
+              <input type="submit" value="Submit" />
             </form>
           </div>
         </div>
