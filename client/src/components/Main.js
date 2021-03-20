@@ -8,6 +8,7 @@ function Main() {
           <video className="Content" autoPlay playsInline loop muted>
             <source src="./hamster.mp4" type="video/mp4" />
           </video>
+          {/* <img src=""/> */}
         </div>
         <div className="Info">
           <Lights />

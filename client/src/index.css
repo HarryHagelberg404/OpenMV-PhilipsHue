@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 html {
   background: linear-gradient(180deg, #ee2f2f, #ffffff);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   /* color: #262322; */
@@ -47,7 +47,7 @@ html {
 }
 
 .Header p {
-  color: #F2E5D7;
+  color: #f2e5d7;
 }
 
 .Header a {
@@ -107,4 +107,100 @@ html {
 .Footer a:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+
+.slider {
+  outline: 0;
+  width: 400px;
+  -webkit-appearance: none;
+  background: linear-gradient(
+    to right,
+    hsl(0, 100%, 88%) 0%,
+    hsl(30, 100%, 88%) 8.3%,
+    hsl(60, 100%, 88%) 16.6%,
+    hsl(90, 100%, 88%) 25%,
+    hsl(120, 100%, 88%) 33.3%,
+    hsl(150, 100%, 88%) 41.6%,
+    hsl(180, 100%, 88%) 50%,
+    hsl(210, 100%, 88%) 58.3%,
+    hsl(240, 100%, 88%) 66.6%,
+    hsl(270, 100%, 88%) 75%,
+    hsl(300, 100%, 88%) 83.3%,
+    hsl(330, 100%, 88%) 91.6%,
+    hsl(360, 100%, 88%) 100%
+  );
+}
+
+.bright-slider {
+  width: 380px;
+}
+
+.formlight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formlight,
+div,
+b {
+  margin-top: 1rem;
+}
+
+.container {
+  background: rgb(184, 197, 201);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: -1px 3px 22px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 3px 22px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 3px 22px 0px rgba(0, 0, 0, 0.75);
+  margin-top: 3rem;
+}
+
+.jumbo1 {
+  width: 100%;
+  text-align: center;
+}
+
+.jumbo1 h1 {
+  margin-bottom: 1rem;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+thead tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+tbody tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+.jumbotron h2 {
+  text-align: center;
+}
+
+.formBtn {
+  cursor: pointer;
+  padding: 0.5rem 4rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #d45252;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.formBtn:hover {
+  background-color: #d16c6c;
 }
