@@ -12,17 +12,16 @@ export default function Lights() {
     });
   }, []);
   return (
-    <div className="container">
-      <div className="jumbotron">
-        {/* <h1>All Lights</h1>
-                <br>
-                <% lights.forEach((light) => { %>
-                    <div class="list-group-item">
-                    <a href="/lights/<%= light.id %>" > Light <%= light.id %> </a>
-                    <br>
-                    Turned On: <%= light.on %>
-                    </div>
-                <% }) %> */}
+    <div class="container">
+      <div class="jumbotron">
+        {lights.map((data) => (
+          <div>
+            <Link to={`/lights/${data.id}`}>
+              <h1>Lamp {data.id}</h1>
+            </Link>
+            <p>Status On/Off: {String(data.on) === "true" ? "On" : "Off"}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
