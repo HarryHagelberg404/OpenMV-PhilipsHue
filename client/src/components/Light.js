@@ -43,10 +43,10 @@ export default function Light() {
     console.log("hej");
   };
   return (
-    <div class="container">
-      <div class="jumbo1">
+    <div className="container">
+      <div className="jumbo1">
         <h1 id="lightid"> Light id här </h1>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th>Turned On</th>
@@ -65,9 +65,9 @@ export default function Light() {
         </table>
       </div>
 
-      <div class="jumbotron">
-        <div class="row">
-          <div class="col-md-6">
+      <div className="jumbotron">
+        <div className="row">
+          <div className="col-md-6">
             <h2> Change Light States </h2>
             <form>
               <b> State: </b>

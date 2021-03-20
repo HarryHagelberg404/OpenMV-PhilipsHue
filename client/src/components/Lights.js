@@ -9,8 +9,8 @@ export default function Lights() {
   }, []);
 
   return (
-    <div class="container">
-      <div class="jumbotron">
+    <div className="container">
+      <div className="jumbotron">
         {/* <h1>All Lights</h1>
                 <br>
                 <% lights.forEach((light) => { %>
