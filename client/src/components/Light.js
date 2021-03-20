@@ -1,23 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import queryString from "query-string";
 
 export default function Light() {
   const [lampLight, setLampLight] = useState(true);
+  const [rangeval, setRangeval] = useState(null);
+  const id = window.location.href;
+
   const changeColor = (e) => {
     e.preventDefault();
-    console.log(lampLight);
+    console.log(rangeval);
     const body = {
       on: lampLight,
-      bri: 100,
+      bri: Number(rangeval),
     };
-    axios.post(`http://localhost:4000/api/lights/1`, { data: body });
+    axios.post(`http://localhost:4000/api/lights/${id.substr(-1)}`, {
+      data: body,
+    });
     console.log("hej");
   };
   return (
     <div class="container">
       <div class="jumbo1">
-        <h1 id="lightid"> Light id här </h1>
+        <h1 id="lightid"> Light {id.substr(-1)} </h1>
         <table class="table">
           <thead>
             <tr>
@@ -71,6 +77,7 @@ export default function Light() {
                     name=" Brightness"
                     max="254"
                     min="0"
+                    onChange={(e) => setRangeval(e.target.value)}
                   />
                 </div>
                 <div class="col-md-1">
