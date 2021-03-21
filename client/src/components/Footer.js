@@ -5,7 +5,7 @@ function Footer() {
                 <a href="https://gitlab.lnu.se/1dv527/student/harry-and-adrian/assignment-3-iot-project/-/blob/master/README.md">
                     <img src="/report.png" alt="Logo of a report" />
                 </a>
-                <a href="https://www.youtube.com/" >
+                <a href="https://youtu.be/sff4WH1-Ocg" >
                     <img src="/youtube.png" alt="Logo of Youtube" />
                 </a>
                 <a href="https://gitlab.lnu.se/1dv527/student/harry-and-adrian/assignment-3-iot-project">

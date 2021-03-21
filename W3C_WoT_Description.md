@@ -16,21 +16,6 @@ If you are to visit the site just to view our interface you can visit the public
 
 ---
 
-## Web of Things (WoT) Thing Description
-
-Make diagram aswell as explain different interactions and protocols.
-Key elements of WoT Desc (https://www.w3.org/TR/wot-thing-description/):
-
-* Abstract
-* Introduction
-* Conformance
-* Terminology
-* Namespace
-* Information model
-* ...
-
----
-
 References:
 1. https://openmv.io/
 2. https://openmv.io/collections/shields/products/wifi-shield-1
